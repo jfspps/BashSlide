@@ -124,18 +124,23 @@ void choose(int* choice){
         }
         case 12: {
             handleChoice(choice, CHOICE_12);
+            break;
         }
         case 13: {
             handleChoice(choice, CHOICE_13);
+            break;
         }
         case 14: {
             handleChoice(choice, CHOICE_14);
+            break;
         }
         case 15: {
             handleChoice(choice, CHOICE_15);
+            break;
         }
         case 16: {
             handleChoice(choice, CHOICE_16);
+            break;
         }
         case 17: {
             handleChoice(choice, CHOICE_17);

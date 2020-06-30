@@ -4,7 +4,7 @@ This program displays slides of very basic Bash commands used in Linux and relat
 
 ## Usage
 
-From the same directory as this Readme, use ./BashSlide.
+Use ./bin/Release/BashSlide
 
 ## Source code
 
