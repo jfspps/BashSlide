@@ -122,6 +122,10 @@ void choose(int* choice){
             handleChoice(choice, CHOICE_10);
             break;
         }
+        case 11: {
+            handleChoice(choice, CHOICE_11);
+            break;
+        }
         case 12: {
             handleChoice(choice, CHOICE_12);
             break;
