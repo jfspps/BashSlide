@@ -1,0 +1,47 @@
+File permissions
+
+Read (r) 	Allows a file to be read. Allows file names in the directory to be read.
+Write (w) 	Allows a file to modified. Allows entries to be modified within the directory.
+Execute (x) 	Allows the execution of a file. Allows access to contents and metadata for entries.
+
+Permission categories
+
+u 		User
+g 		Group
+o 		Other
+a 		All
+
+● Every user is in at least one group.
+● Users can belong to many groups.
+● Groups are used to organize users.
+● The groups command displays a user’s groups.
+
+More on read-write-execute permissions
+
+-rw-rw-r--
+
+- denotes a regular file, then the following triads rw-, rw- and r-- are the permissions for User, Group and Other, respectively
+
+Usage of chmod (change mode)
+
+chmod (ugoa) 			User category user, group, other, all
+chmod (ugoa) (+-=)		Add, subtract, or set permissions
+chmod (ugoa) (+-=) (rwx)	Read, Write, Execute
+
+e.g. chmod u=rwx fileOrDirectory
+
+The above command sets the current user with r, w and x access to the given fileOrDirectory.
+
+e.g. chmod ugo+w fileOrDirectory
+
+The above command gives all (equivalent to a) write access to the fileOrDirectory
+
+There are also binary and octal based options:
+
+Symbolic 	rwx 	r-x 	r--
+Binary 		111 	101 	100
+Decimal 	7 	5 	4
+
+Unless otherwise set by the command mask (not described here), the default new file and directory masks are 777 and 666 respectively. That is, all
+rwx and all rw- respectively.
+

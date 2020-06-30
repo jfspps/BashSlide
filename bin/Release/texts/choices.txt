@@ -1,0 +1,20 @@
+0 - Linux directories
+1 - Basic commands
+2 - Getting more command info
+3 - Directory commands
+4 - File lists with ls
+5 - File and directory permissions
+6 - Finding files on disk
+7 - File handling
+8 - Wildcards ?*[] in Linux
+9 - I/O redirection
+10 - Searching individual files
+11 - Command aliases
+12 - Superuser and sudo
+13 - Command history
+14 - Environment variables
+15 - Processes and jobs
+16 - Scheduling jobs
+17 - Installing packages
+
+Enter any other key or character to quit.

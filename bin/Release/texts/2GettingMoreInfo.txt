@@ -1,0 +1,24 @@
+Finding more command line arguments
+
+● Determining environment variables:
+
+echo $VAR_NAME
+echo $PATH
+
+● Find the location of a binary:
+
+which command_name
+which ls
+
+● To get more detailed info about a given command, use:
+
+--help (or in some cases -h) to a 
+command to get help.
+
+● To look for binaries which have man pages with SEARCH_TERM use:
+
+man -k SEARCH_TERM
+
+This helps find binaries' man pages with more natural language terms.
+
+===================================================================

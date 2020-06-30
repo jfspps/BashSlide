@@ -1,0 +1,43 @@
+Processes and jobs
+
+A job and a process in Linux is an application currently running.
+
+Display process status:
+
+ps
+
+This presents something like:
+
+PID TTY      STAT   TIME COMMAND
+26904 pts/3    Ss     0:00 /bin/bash
+29633 pts/3    T      0:00 ping -i 5 google.com
+29643 pts/3    R+     0:00 ps t
+
+ps options include:
+
+-e 	Everything, all processes.
+-f 	Full format listing.
+-u 	username Display username’s processes.
+-p 	pid Display information for PID.
+
+Commonly used ps commands:
+
+ps -e 		Display all processes.
+ps -ef 		Display all processes, full.
+ps -eH 		Display a process tree.
+ps -e --forest 	Display a process tree.
+ps -u username 	Display user’s processes.
+
+command & 	Start command in background.
+Ctrl-c 		Kill the foreground process.
+Ctrl-z 		Suspend the foreground process.
+
+bg [%num] 	Run a suspended process in the background.
+fg [%num] 	Move a background process to the foreground.
+jobs [%num] 	List all stopped or background jobs.
+
+By default, the bg and fg commands operate on the most recently stopped/backgrounded process. [%num] is the job number.
+
+kill 			Kill a process by job number or PID.
+kill [-sig] pid 	Send a signal to a process.
+kill -l 		Display a list of signals.

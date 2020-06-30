@@ -1,0 +1,15 @@
+Common Linux directories and their uses
+
+/ 		Root: the top file system
+/bin 		Binaries and other programs.
+/etc 		System configuration files.
+/home 		Home directories.
+/opt 		Optional or third party software.
+/tmp 		Temporary space, usually emptied on reboot.
+/usr 		User related programs.
+/var 		Variable data and log files.
+/boot 		Files needed to boot the OS.
+/dev 		Device files.
+
+
+

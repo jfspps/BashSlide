@@ -1,0 +1,17 @@
+The command line history
+
+history 	Display a list of commands in the
+		shell history.
+!N 		Repeat command line number N.
+!! 		Repeat the previous command line.
+!string 	Repeat the most recent command
+		starting with "string."
+
+Set the number of commands to keep in the command history with HISTSIZE. Defaults to 500.
+
+● Some helpful shortcut key commands:
+
+Search for commands in your shell history.
+Ctrl-r Reverse search.
+
+Tab - Autocompletes commands and filenames.

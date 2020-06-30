@@ -1,0 +1,30 @@
+Basic Linux commands
+
+All Linux commands and file IO are case sensitive.
+
+● ls - 	Lists directory contents.
+	Exmaple use:
+	ls -l 	long listing format
+
+● cd 	Changes the current directory.
+● pwd	Displays the present working directory.
+● cat	Concatenates and displays files.
+● echo	Displays arguments to the screen.
+● man	Displays the online manual. Go here for more info about any command.
+
+	Example use:
+	Enter Move down one line.
+	Space Move down one page.
+	g Move to the top of the page.
+	G Move to the bottom of the page.
+	q Quit.
+
+● exit	Exits the shell or your current session.
+● clear	Clears the screen.
+
+● $PATH determines command search path.
+● You can specify a command with a full path.
+● You can execute command not in $PATH.
+● ./command = Execute command in the current directory.
+
+===================================================================

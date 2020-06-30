@@ -1,0 +1,32 @@
+Common environment variables
+
+EDITOR 	Program to run to perform edits
+HOME 	Home directory of the user.
+LOGNAME The login name of the user.
+MAIL 	The location of the user’s local inbox.
+OLDPWD 	The previous working directory.
+PATH 	A list of directions to search for
+	commands.
+PAGER 	Program used to paginate through
+	files.
+PS1 	The primary prompt string.
+PWD 	Present working directory.
+USER 	The username of the current user.
+
+printenv 	Print all or part of environment.
+echo $ENV_VAR 	Print the ENV_VAR variable.
+
+● Exporting environment variables
+
+export 	Allows vars to be used by subshells.
+
+● Clearing environment variables
+
+unset 	Delete an environment variable.
+
+$ echo $PAGER
+less
+$ unset PAGER
+$ echo $PAGER
+
+$

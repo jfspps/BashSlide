@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1593544806 source:/home/james/Dev/BashSlide/main.cpp
+	<iostream>
+	<fstream>
+

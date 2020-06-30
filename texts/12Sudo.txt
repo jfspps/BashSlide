@@ -1,0 +1,51 @@
+Running commands as others
+
+su [username] 	Change user ID or become superuser
+
+su has options:
+
+- 	A hyphen is used to provide an
+	environment similar to what the
+	user would expect had the user
+	logged in directly.
+-c 	command Specify a command to be
+	executed.
+
+● Display the current username
+
+whoami
+
+● Run commands as others
+
+$ whoami
+jason
+$ su oracle
+Password:
+$ whoami
+oracle
+$
+
+● Running commands as another user, usually the superuser
+
+sudo -l 		List available commands.
+sudo command 		Run command as root.
+sudo -u root command 	Same as above.
+sudo -u user command 	Run as user.
+
+sudo su 		Switch to the superuser account.
+sudo su 		Switch to the superuser account
+			with root’s environment.
+sudo su - username 	Switch to the
+			username account.
+
+sudo -s 		Start a shell
+sudo -u root -s 	Same as sudo -s
+sudo -u user -s 	Start a shell as user
+
+visudo 			Edit the /etc/sudoers file
+
+The sudoers files has te following format:
+
+user host=(users) [NOPASSWD:]commands
+adminuser ALL=(ALL) NOPASSWD:ALL
+jimi linuxsvr=(root) /etc/init.d/oracle

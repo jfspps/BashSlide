@@ -1,0 +1,19 @@
+Passing data between commands
+
+I/O Name 	Abbreviation 	File Descriptor
+Standard Input 	stdin 		0
+Standard Output stdout 		1
+Standard Error 	stderr 		2
+
+> Redirects standard output to a file. Overwrites (truncating) existing contents.
+
+>> Redirects standard output to a file. Appends to any existing contents.
+
+< Redirects input from a file to a command.
+
+Redirections are read left to right.
+
+& 			Used with redirection to signal that a file descriptor is being used.
+2>&1 			Effectively combines stderr and standard output.
+2>file 			Redirect standard error to a file.
+ls 2>&1 > dirlist	Combine ls output with stderr, send to stdin and then to the file dirlist

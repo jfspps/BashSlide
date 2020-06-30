@@ -1,0 +1,37 @@
+Searching for data in files
+
+● Display lines matching a pattern:
+grep pattern file
+
+Some grep options:
+
+-i 	Perform a search, ignoring case.
+-c 	Count the number of occurrences in a file.
+-n 	Precede output with line numbers.
+-v 	Invert Match. Print lines that don’t match.
+
+● Determining the file type (not extension)
+
+file file_name
+
+Example output:
+
+$ file sales.data
+sales.data: ASCII text
+$ file *
+bin: directory
+jeff.tar: POSIX tar archive
+
+● Searching for strings in binary files
+
+strings Display printable strings.
+
+● Pipes - feeding data between commands
+
+command-output | command-input
+
+For example, concatenate and display file and pass the output to grep as pattern:
+
+cat file | grep pattern
+
+===================================================================
