@@ -1,6 +1,6 @@
 Common Linux directories and their uses
 
-/ 		Root: the top file system
+/ 		    Root: the top file system
 /bin 		Binaries and other programs.
 /etc 		System configuration files.
 /home 		Home directories.
@@ -11,5 +11,4 @@ Common Linux directories and their uses
 /boot 		Files needed to boot the OS.
 /dev 		Device files.
 
-
-
+===================================================================

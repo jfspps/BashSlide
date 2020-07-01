@@ -43,4 +43,6 @@ Named character classes
 \ - 	escape character. Use if you want to match a wildcard character.
 	○ Match all files that end with a question mark:
 		■ *\?
-			● done?
+			● How are you?
+
+===================================================================

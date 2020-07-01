@@ -15,3 +15,5 @@ Search for commands in your shell history.
 Ctrl-r Reverse search.
 
 Tab - Autocompletes commands and filenames.
+
+===================================================================

@@ -41,3 +41,5 @@ By default, the bg and fg commands operate on the most recently stopped/backgrou
 kill 			Kill a process by job number or PID.
 kill [-sig] pid 	Send a signal to a process.
 kill -l 		Display a list of signals.
+
+===================================================================

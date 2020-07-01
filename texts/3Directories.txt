@@ -1,7 +1,7 @@
 Directory related commands
 
-. 	This directory
-.. 	The parent directory
+. 	    This directory
+.. 	    The parent directory
 cd - 	Change to the previous directory
 
 mkdir [-p] directory - Create a directory.
@@ -9,3 +9,5 @@ rmdir [-p] directory - Remove a directory.
 rm -rf directory - Recursively removes directory.
 
 The -p argument permits the creation of new parent directories e.g. /parentDir/newDir
+
+===================================================================

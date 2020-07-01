@@ -39,3 +39,4 @@ dpkg -S /path/to/file	List file’s package.
 dpkg -L package		List all files in package.
 dpkg -i package.deb	Install package.
 
+===================================================================

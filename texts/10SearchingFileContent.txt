@@ -33,3 +33,5 @@ command-output | command-input
 For example, concatenate and display file and pass the output to grep as pattern:
 
 cat file | grep pattern
+
+===================================================================

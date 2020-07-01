@@ -17,5 +17,4 @@
 16 - Scheduling jobs
 17 - Installing packages
 
-Enter any other key or character to quit
-
+Enter a number 0-17 (other values or letters to quit)

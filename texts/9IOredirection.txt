@@ -17,3 +17,5 @@ Redirections are read left to right.
 2>&1 			Effectively combines stderr and standard output.
 2>file 			Redirect standard error to a file.
 ls 2>&1 > dirlist	Combine ls output with stderr, send to stdin and then to the file dirlist
+
+===================================================================
