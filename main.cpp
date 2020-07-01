@@ -37,6 +37,7 @@ int main(int argc, char* argv[])
     //determine the full path to the exectable and then rebuild the TXT paths
     string argv_str(argv[0]);
     string base = argv_str.substr(0, argv_str.find_last_of("/"));
+    cout << "Running BashSlide from " << base << '\n';
     buildPaths(base);
 
     //ask the user to choose
@@ -77,7 +78,7 @@ void handleChoice(int* choice, string path)
 {
     ifstream screen (path);
     if (screen.is_open()){
-        cout << screen.rdbuf() << "\nPress enter to continue...\n";
+        cout << screen.rdbuf() << "\nPress enter to return to options...\n";
         cin.get();
     }
     else {

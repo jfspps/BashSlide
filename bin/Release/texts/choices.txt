@@ -16,5 +16,3 @@
 15 - Processes and jobs
 16 - Scheduling jobs
 17 - Installing packages
-
-Enter any other key or character to quit.
