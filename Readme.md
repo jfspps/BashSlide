@@ -12,7 +12,7 @@ BashSlide expects the text files to be located in the same directory as the cons
 
 3. Copy the BashSlide directory to any location of your choice. You can run `./BashSlide` directly from the BashSlide directory if you wish.
 
-4. To run BashSlide from any directory, add the path to PATH environment with `export PATH=$PATH:/pathToBashSlideDirectory` added at the end of the (hidden) `.bashrc` located your /home directory. This will be a per-user setting not a system-wide setting. Type `bashslide.sh` to execute.
+4. To run BashSlide from any directory, first we need to set the path in the shell script. Open the shell script in any text editor and follow the instructions about setting the path to `BashSlide` on your machine. Then add the path to PATH environment with `export PATH=$PATH:/pathToBashSlideDirectory` added at the end of the (hidden) `.bashrc` located your /home directory. This will be a per-user setting not a system-wide setting. Close all terminals (to allow the new PATH variables to apply) and the in a new terminal type `bashslide.sh` to execute.
 
 ## Source code
 
