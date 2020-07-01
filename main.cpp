@@ -6,65 +6,75 @@ BashSlide by James Apps, GPL v2
 #include <fstream>
 using namespace std;
 
-const string CHOICE = "./texts/choices.txt";
-const string CHOICE_0 = "./texts/0LinuxIntro.txt";
-const string CHOICE_1 = "./texts/1BasicCommands.txt";
-const string CHOICE_2 = "./texts/2GettingMoreInfo.txt";
-const string CHOICE_3 = "./texts/3Directories.txt";
-const string CHOICE_4 = "./texts/4FileLists.txt";
-const string CHOICE_5 = "./texts/5Permissions.txt";
-const string CHOICE_6 = "./texts/6FindFile.txt";
-const string CHOICE_7 = "./texts/7FileHandling.txt";
-const string CHOICE_8 = "./texts/8WildcardsRegExp.txt";
-const string CHOICE_9 = "./texts/9IOredirection.txt";
-const string CHOICE_10 = "./texts/10SearchingFileContent.txt";
-const string CHOICE_11 = "./texts/11CommandAlias.txt";
-const string CHOICE_12 = "./texts/12Sudo.txt";
-const string CHOICE_13 = "./texts/13CommandHistory.txt";
-const string CHOICE_14 = "./texts/14EnvironmentVariables.txt";
-const string CHOICE_15 = "./texts/15ProcessesAndJobs.txt";
-const string CHOICE_16 = "./texts/16SchedulingJobs.txt";
-const string CHOICE_17 = "./texts/17PackageInstallation.txt";
-
+void buildPaths(string);
 void showMenu();
-void choose(int* choice);
-int handleInput(int* choice);
-void handleChoice(int* choice, string path);
+void choose(int*);
+int handleInput(int*);
+void handleChoice(int*, string);
 
-int main() {
+string CHOICE = "/texts/choices.txt";
+string CHOICE_0 = "/texts/0LinuxIntro.txt";
+string CHOICE_1 = "/texts/1BasicCommands.txt";
+string CHOICE_2 = "/texts/2GettingMoreInfo.txt";
+string CHOICE_3 = "/texts/3Directories.txt";
+string CHOICE_4 = "/texts/4FileLists.txt";
+string CHOICE_5 = "/texts/5Permissions.txt";
+string CHOICE_6 = "/texts/6FindFile.txt";
+string CHOICE_7 = "/texts/7FileHandling.txt";
+string CHOICE_8 = "/texts/8WildcardsRegExp.txt";
+string CHOICE_9 = "/texts/9IOredirection.txt";
+string CHOICE_10 = "/texts/10SearchingFileContent.txt";
+string CHOICE_11 = "/texts/11CommandAlias.txt";
+string CHOICE_12 = "/texts/12Sudo.txt";
+string CHOICE_13 = "/texts/13CommandHistory.txt";
+string CHOICE_14 = "/texts/14EnvironmentVariables.txt";
+string CHOICE_15 = "/texts/15ProcessesAndJobs.txt";
+string CHOICE_16 = "/texts/16SchedulingJobs.txt";
+string CHOICE_17 = "/texts/17PackageInstallation.txt";
 
-    int choice = -1;
+int main(int argc, char* argv[])
+{
+    //determine the full path to the exectable and then rebuild the TXT paths
+    string argv_str(argv[0]);
+    string base = argv_str.substr(0, argv_str.find_last_of("/"));
+    buildPaths(base);
 
-    while(handleInput(&choice) > 0){
+    //ask the user to choose
+    int choice;
+
+    while(handleInput(&choice) != -1){
         choose(&choice);
+        choice = -1;
     }
 
     return 0;
 }
 
-void showMenu(){
-    cout << "Enter a number 1-17 to view one of the following (other values or letters to quit)\n";
+void showMenu()
+{
+    cout << "Enter a number 0-17 to view one of the following (other values or letters to quit)\n";
     ifstream menu (CHOICE);
 	if (menu.is_open())
-		cout << menu.rdbuf();
+		cout << menu.rdbuf() << '\n';
 	else
 		cout << "Could not open Menu text file\n";
 }
 
-int handleInput(int* choice){
+int handleInput(int* choice)
+{
     showMenu();
     cin >> *choice;
-    while(isspace(*choice)){
-        cin >> *choice;
+
+    //by now, *choice = -1 if the user entered values out of bounds
+    if (*choice < 0 || *choice > 17){
+        return -1;
     }
     cin.get();  //clears ENTER
-    if (*choice > 0 && *choice < 18){
-        return *choice;
-    }
-    return -1;
+    return *choice;
 }
 
-void handleChoice(int* choice, string path){
+void handleChoice(int* choice, string path)
+{
     ifstream screen (path);
     if (screen.is_open()){
         cout << screen.rdbuf() << "\nPress enter to continue...\n";
@@ -76,7 +86,8 @@ void handleChoice(int* choice, string path){
 }
 
 
-void choose(int* choice){
+void choose(int* choice)
+{
     switch(*choice) {
         case 0: {
             handleChoice(choice, CHOICE_0);
@@ -150,4 +161,27 @@ void choose(int* choice){
             handleChoice(choice, CHOICE_17);
         }
     }
+}
+
+void buildPaths(string base)
+{
+    CHOICE = base + CHOICE;
+    CHOICE_0 = base + CHOICE_0;
+    CHOICE_1 = base + CHOICE_1;
+    CHOICE_2 = base + CHOICE_2;
+    CHOICE_3 = base + CHOICE_3;
+    CHOICE_4 = base + CHOICE_4;
+    CHOICE_5 = base + CHOICE_5;
+    CHOICE_6 = base + CHOICE_6;
+    CHOICE_7 = base + CHOICE_7;
+    CHOICE_8 = base + CHOICE_8;
+    CHOICE_9 = base + CHOICE_9;
+    CHOICE_10 = base + CHOICE_10;
+    CHOICE_11 = base + CHOICE_11;
+    CHOICE_12 = base + CHOICE_12;
+    CHOICE_13 = base + CHOICE_13;
+    CHOICE_14 = base + CHOICE_14;
+    CHOICE_15 = base + CHOICE_15;
+    CHOICE_16 = base + CHOICE_16;
+    CHOICE_17 = base + CHOICE_17;
 }
