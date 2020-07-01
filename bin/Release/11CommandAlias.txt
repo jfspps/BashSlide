@@ -17,7 +17,7 @@ $ alias cls='clear'
 Removing aliases:
 
 unalias name 	Remove the “name” alias.
-unalias -a 	Remove all aliases
+unalias -a 		Remove all aliases
 
 ● Add aliases to your personal initialization
 files.

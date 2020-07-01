@@ -12,8 +12,7 @@ which ls
 
 ● To get more detailed info about a given command, use:
 
---help (or in some cases -h) to a 
-command to get help.
+--help (or in some cases -h) to a command to get help.
 
 ● To look for binaries which have man pages with SEARCH_TERM use:
 

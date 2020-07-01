@@ -16,3 +16,5 @@
 15 - Processes and jobs
 16 - Scheduling jobs
 17 - Installing packages
+
+Enter a number 0-17 (other values or letters to quit)

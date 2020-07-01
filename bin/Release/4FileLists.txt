@@ -15,25 +15,25 @@ r 				Read
 w 				Write
 x 				Execute
 
-Number of links 		1
-Owner name 			jimi
-Group name 			users
+Number of links 		            1
+Owner name 			            jimi
+Group name 			            users
 Number of bytes in the file 	2048
-Last modification time 		Sep 13 10:00
-File name 			file.ext
+Last modification time 		    Sep 13 10:00
+File name 			            file.ext
 
 Symbolic links are shortcuts which when accessed perform as if the pointed file was accessed.
 
 Other ls command options (can be combined in any order):
 
--a 	List all files, including hidden (.dot) files.
+-a 	    List all files, including hidden (.dot) files.
 --color List files with colorized output.
--d 	List directory names, not contents.
--l 	Use the long listing format.
--r 	Reverse the order.
--R 	List files recursively.
--t 	Sort by time, most recent first.
--F	File type (/ Directory, @ Link, * Executable)
+-d 	    List directory names, not contents.
+-l 	    Use the long listing format.
+-r 	    Reverse the order.
+-R 	    List files recursively.
+-t 	    Sort by time, most recent first.
+-F	    File type (/ Directory, @ Link, * Executable)
 -latr 	Long listing including all files reverse sorted by time.
 
 The tree command performs similarly to ls -r but provides a more visual output:

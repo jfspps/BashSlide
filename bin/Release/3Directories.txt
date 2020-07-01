@@ -1,7 +1,7 @@
 Directory related commands
 
-. 	This directory
-.. 	The parent directory
+. 	    This directory
+.. 	    The parent directory
 cd - 	Change to the previous directory
 
 mkdir [-p] directory - Create a directory.
