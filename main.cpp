@@ -6,39 +6,42 @@ BashSlide by James Apps, GPL v2
 #include <fstream>
 using namespace std;
 
-void buildPaths(string);
 void showMenu();
 void choose(int*);
 int handleInput(int*);
 void handleChoice(int*, string);
 
-string CHOICE = "/texts/choices.txt";
-string CHOICE_0 = "/texts/0LinuxIntro.txt";
-string CHOICE_1 = "/texts/1BasicCommands.txt";
-string CHOICE_2 = "/texts/2GettingMoreInfo.txt";
-string CHOICE_3 = "/texts/3Directories.txt";
-string CHOICE_4 = "/texts/4FileLists.txt";
-string CHOICE_5 = "/texts/5Permissions.txt";
-string CHOICE_6 = "/texts/6FindFile.txt";
-string CHOICE_7 = "/texts/7FileHandling.txt";
-string CHOICE_8 = "/texts/8WildcardsRegExp.txt";
-string CHOICE_9 = "/texts/9IOredirection.txt";
-string CHOICE_10 = "/texts/10SearchingFileContent.txt";
-string CHOICE_11 = "/texts/11CommandAlias.txt";
-string CHOICE_12 = "/texts/12Sudo.txt";
-string CHOICE_13 = "/texts/13CommandHistory.txt";
-string CHOICE_14 = "/texts/14EnvironmentVariables.txt";
-string CHOICE_15 = "/texts/15ProcessesAndJobs.txt";
-string CHOICE_16 = "/texts/16SchedulingJobs.txt";
-string CHOICE_17 = "/texts/17PackageInstallation.txt";
+const string CHOICE = "/choices.txt";
+const string CHOICE_0 = "/0LinuxIntro.txt";
+const string CHOICE_1 = "/1BasicCommands.txt";
+const string CHOICE_2 = "/2GettingMoreInfo.txt";
+const string CHOICE_3 = "/3Directories.txt";
+const string CHOICE_4 = "/4FileLists.txt";
+const string CHOICE_5 = "/5Permissions.txt";
+const string CHOICE_6 = "/6FindFile.txt";
+const string CHOICE_7 = "/7FileHandling.txt";
+const string CHOICE_8 = "/8WildcardsRegExp.txt";
+const string CHOICE_9 = "/9IOredirection.txt";
+const string CHOICE_10 = "/10SearchingFileContent.txt";
+const string CHOICE_11 = "/11CommandAlias.txt";
+const string CHOICE_12 = "/12Sudo.txt";
+const string CHOICE_13 = "/13CommandHistory.txt";
+const string CHOICE_14 = "/14EnvironmentVariables.txt";
+const string CHOICE_15 = "/15ProcessesAndJobs.txt";
+const string CHOICE_16 = "/16SchedulingJobs.txt";
+const string CHOICE_17 = "/17PackageInstallation.txt";
+string base;
 
 int main(int argc, char* argv[])
 {
     //determine the full path to the exectable and then rebuild the TXT paths
+    //argv[0] is the path and console app name (argv[1] etc. would be arguments)
     string argv_str(argv[0]);
-    string base = argv_str.substr(0, argv_str.find_last_of("/"));
-    cout << "Running BashSlide from " << base << '\n';
-    buildPaths(base);
+
+    //build a substring up until the console app name
+    base = argv_str.substr(0, argv_str.find_last_of("/"));
+
+    //cout << "Running BashSlide from " << base << '\n';
 
     //ask the user to choose
     int choice;
@@ -53,12 +56,11 @@ int main(int argc, char* argv[])
 
 void showMenu()
 {
-    cout << "Enter a number 0-17 to view one of the following (other values or letters to quit)\n";
-    ifstream menu (CHOICE);
+    ifstream menu (base+CHOICE);
 	if (menu.is_open())
 		cout << menu.rdbuf() << '\n';
 	else
-		cout << "Could not open Menu text file\n";
+		cout << "Could not open Menu text file. Enter CTRL-C to quit.\n";
 }
 
 int handleInput(int* choice)
@@ -76,16 +78,16 @@ int handleInput(int* choice)
 
 void handleChoice(int* choice, string path)
 {
-    ifstream screen (path);
+    ifstream screen (base+path);
     if (screen.is_open()){
         cout << screen.rdbuf() << "\nPress enter to return to options...\n";
         cin.get();
     }
     else {
         cout << "Could not open text file\n";
+        cin.get();
     }
 }
-
 
 void choose(int* choice)
 {
@@ -162,27 +164,4 @@ void choose(int* choice)
             handleChoice(choice, CHOICE_17);
         }
     }
-}
-
-void buildPaths(string base)
-{
-    CHOICE = base + CHOICE;
-    CHOICE_0 = base + CHOICE_0;
-    CHOICE_1 = base + CHOICE_1;
-    CHOICE_2 = base + CHOICE_2;
-    CHOICE_3 = base + CHOICE_3;
-    CHOICE_4 = base + CHOICE_4;
-    CHOICE_5 = base + CHOICE_5;
-    CHOICE_6 = base + CHOICE_6;
-    CHOICE_7 = base + CHOICE_7;
-    CHOICE_8 = base + CHOICE_8;
-    CHOICE_9 = base + CHOICE_9;
-    CHOICE_10 = base + CHOICE_10;
-    CHOICE_11 = base + CHOICE_11;
-    CHOICE_12 = base + CHOICE_12;
-    CHOICE_13 = base + CHOICE_13;
-    CHOICE_14 = base + CHOICE_14;
-    CHOICE_15 = base + CHOICE_15;
-    CHOICE_16 = base + CHOICE_16;
-    CHOICE_17 = base + CHOICE_17;
 }

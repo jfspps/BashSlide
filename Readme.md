@@ -1,14 +1,12 @@
 # BashSlide
 
-This program displays slides of very basic Bash commands used in Linux and related systems. The text displayed is stored in TXT files, located in /texts. These files can be edited as desired.
+This program displays slides of very basic Bash commands used in Linux and related systems. The text file content can be edited as desired.
 
 ## Usage
 
-Use ./bin/Release/BashSlide
+You can ensure that the console app (BashSlide) and Shell script (bashslide.sh) are executable in Linux by running 'sudo chmod a+x filename' from the BashSlide directory. Copy the BashSlide directory to any location of your choice and then for convenience, add the path to PATH environment with 'export PATH=$PATH:/pathToBashSlideDirectory' added at the end of the (hidden) .bashrc located your /home directory. This will be a per-user setting not a system-wide setting. Then run 'bashslide.sh'.
 
-You can make the file executable by running 'sudo chmod a+x BashSlide'. Copy BashSlide and /text to any directory of your choice and for convenience, add the path to PATH environment with 'export PATH=$PATH:/pathToBashSlideDirectory'.
-
-By default, BashSlide looks for text files in the accompanying /text directory, which is located in the same directory as BashSlide. The path and TXT file names can be changed and BashSlide recompiled if needed.
+The path and TXT file names can be changed in main.cpp if needed, though the BashSlide project will subsequently need recompiling.
 
 ## Source code
 
